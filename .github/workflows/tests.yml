@@ -20,7 +20,7 @@ jobs:
           npm ci
           npx playwright install --with-deps
           # create a 10GB file 
-          dd if=/dev/zero of=bigfile.bin bs=1M count=18240 status=progress
+          dd if=/dev/urandom of=bigfile.bin bs=1M count=18240 status=progress
 
       - name: run tests
         run: |
